@@ -1,0 +1,12 @@
+
+{
+  {{ include('_partials/context.jinja') | safe }},
+  "@type": "LocalBusiness",
+  "name": "{{ name }}"{% if url %},
+  "url": "{{ url }}"{% endif %}{% if telephone %},
+  "telephone": "{{ telephone }}"{% endif %}{% if image %},
+  "image": "{{ image }}"{% endif %}{% if address %},
+  {{ include('_partials/address.jinja') | safe }}{% endif %}{% if geo %},
+  {{ include('_partials/geo.jinja') | safe }}{% endif %}{% if openingHours %},
+  {{ include('_partials/hours.jinja') | safe }}{% endif %}
+}

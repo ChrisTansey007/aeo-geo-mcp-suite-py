@@ -1,0 +1,12 @@
+
+{
+  {{ include('_partials/context.jinja') | safe }},
+  "@type": ["LocalBusiness","Place"],
+  "name": "{{ name }}",
+  "parentOrganization": {"@type":"Organization","name":"{{ parentOrganization.name }}"},
+  "url": "{{ url }}",
+  "telephone": "{{ telephone }}",
+  {{ include('_partials/address.jinja') | safe }}{% if geo %},
+  ,{{ include('_partials/geo.jinja') | safe }}{% endif %}{% if openingHours %},
+  ,{{ include('_partials/hours.jinja') | safe }}{% endif %}
+}

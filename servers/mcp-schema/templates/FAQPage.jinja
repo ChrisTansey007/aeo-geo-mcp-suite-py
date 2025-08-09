@@ -1,0 +1,10 @@
+
+{
+  {{ include('_partials/context.jinja') | safe }},
+  "@type":"FAQPage",
+  "mainEntity":[
+    {% for q in qa %}
+    {"@type":"Question","name":"{{ q.question }}","acceptedAnswer":{"@type":"Answer","text":"{{ q.answer }}"}}{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}

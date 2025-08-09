@@ -1,0 +1,15 @@
+
+{
+  {{ include('_partials/context.jinja') | safe }},
+  "@type": ["WebPage","ItemPage"],
+  "name": "{{ name }}",
+  "url": "{{ url }}",
+  "breadcrumb": {
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"item":{"@id":"{{ siteHome }}","name":"Home"}},
+      {"@type":"ListItem","position":2,"item":{"@id":"{{ cityHub }}","name":"{{ cityName }}"}}
+    ]
+  },
+  "mainEntity": {"@type":"Service","serviceType":"{{ serviceType }}","areaServed":"{{ cityName }} {{ region }}"}
+}

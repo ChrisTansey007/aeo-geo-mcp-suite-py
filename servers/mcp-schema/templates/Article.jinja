@@ -1,0 +1,10 @@
+
+{
+  {{ include('_partials/context.jinja') | safe }},
+  "@type":"Article",
+  "headline":"{{ headline }}",
+  "datePublished":"{{ datePublished }}"{% if author %},
+  "author":{"@type":"Person","name":"{{ author }}"}{% endif %}{% if image %},
+  "image":"{{ image }}"{% endif %}{% if mainEntityOfPage %},
+  "mainEntityOfPage":"{{ mainEntityOfPage }}"{% endif %}
+}

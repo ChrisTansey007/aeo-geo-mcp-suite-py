@@ -1,0 +1,10 @@
+
+{
+  {{ include('_partials/context.jinja') | safe }},
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {% for it in items %}
+    {"@type":"ListItem","position": {{ loop.index }},"item": {"@id":"{{ it.id }}","name":"{{ it.name }}"}}{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}

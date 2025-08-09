@@ -1,0 +1,6 @@
+
+"openingHoursSpecification": [
+  {% for h in openingHours %}
+  {"@type":"OpeningHoursSpecification","dayOfWeek": "{{h.day}}","opens":"{{h.opens}}","closes":"{{h.closes}}"}{% if not loop.last %},{% endif %}
+  {% endfor %}
+]

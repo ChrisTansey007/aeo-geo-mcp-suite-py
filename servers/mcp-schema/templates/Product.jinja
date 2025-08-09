@@ -1,0 +1,9 @@
+
+{
+  {{ include('_partials/context.jinja') | safe }},
+  "@type":"Product",
+  "name":"{{ name }}"{% if sku %},
+  "sku":"{{ sku }}"{% endif %}{% if brand %},
+  "brand":{"@type":"Brand","name":"{{ brand }}"}{% endif %}{% if offers %},
+  "offers":{"@type":"Offer","price":"{{ offers.price }}","priceCurrency":"{{ offers.priceCurrency }}","availability":"{{ offers.availability }}"}{% endif %}
+}

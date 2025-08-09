@@ -1,0 +1,10 @@
+
+{
+  {{ include('_partials/context.jinja') | safe }},
+  "@type":"ItemList",
+  "itemListElement":[
+    {% for it in items %}
+    {"@type":"ListItem","position": {{ loop.index }},"url":"{{ it.url }}","name":"{{ it.name }}"}{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}

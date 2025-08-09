@@ -1,0 +1,37 @@
+meta: { name: default, version: 2 }
+ordering: { sort_by: [span.start, rule, message] }
+severity:
+  tldr.missing: error
+  quotables.too_few: warn
+  comparison.table_missing: error
+  forbidden.phrase: warn
+  brand.glossary.mismatch: warn
+  citations.missing_numbers: warn
+  geo.nap_mismatch: warn
+  geo.city_presence: warn
+  links.internal.hub_spoke: warn
+
+requirements:
+  tldr: { markers: ["TL;DR:", "Summary:", "TLDR:"], window_chars: 400 }
+  quotables: { min_count: 5, max_len_chars: 140 }
+  comparison: { triggers: [" vs ", "comparison", "compare", "pros and cons"], table_required: true }
+  citations:
+    require_when_numbers: true
+    number_regex: "(?:\u0024\d[\d,]*(?:\.\d+)?|\b\d{4}\b|\b\d+(?:%|x)\b)"
+    allowed_citation_patterns: ["\[[0-9]+\]", "(https?://[^ )]+)"]
+phrases:
+  forbidden:
+    - { phrase: "click here", suggestion: "Use descriptive link text." }
+    - { phrase: "cutting-edge", suggestion: "Describe the concrete advantage." }
+    - { phrase: "world-class", suggestion: "Provide proof or remove." }
+    - { phrase: "utilize", suggestion: "Use 'use'." }
+brand_glossary:
+  canonical: "Port City Fence"
+  variants:
+    - { pattern: "Port City fences", fix: "Port City Fence" }
+    - { pattern: "PortCity Fence", fix: "Port City Fence" }
+    - { pattern: "PC Fence", fix: "Port City Fence" }
+readability:
+  target_grade: 8
+  long_sentence_threshold: 28
+  very_long_sentence_threshold: 40

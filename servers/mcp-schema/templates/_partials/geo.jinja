@@ -1,0 +1,7 @@
+
+"geo": {
+  "@type": "GeoCoordinates",
+  "latitude": {{ geo.latitude }},
+  "longitude": {{ geo.longitude }}
+}{% if hasMap %},
+"hasMap": "{{ hasMap }}"{% endif %}
