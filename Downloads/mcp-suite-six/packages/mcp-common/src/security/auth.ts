@@ -1,1 +1,0 @@
-export function checkKey(provided?:string, envKey=process.env.MCP_API_KEY){ if(!envKey) return true; if(!provided) return false; return provided===envKey;}

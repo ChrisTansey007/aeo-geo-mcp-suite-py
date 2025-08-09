@@ -1,1 +1,0 @@
-{"name":"@mcp/mcp-crawl","version":"0.1.0","type":"module","main":"dist/index.js","scripts":{"build":"tsc -p tsconfig.json","start:http":"node dist/server.js --transport=http --port=3001","start:stdio":"node dist/server.js --transport=stdio"},"dependencies":{"@mcp/common":"workspace:*","cheerio":"^1.0.0-rc.12","pino":"^9.0.0"},"devDependencies":{"typescript":"^5.5.4"}}

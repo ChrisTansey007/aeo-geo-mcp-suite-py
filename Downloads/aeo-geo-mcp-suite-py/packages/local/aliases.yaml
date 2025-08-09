@@ -1,8 +1,0 @@
-# City/county/ZIP synonyms for GEO boosting
-markets:
-	wilmington_nc:
-		city: ["Wilmington"]
-		county: ["New Hanover County"]
-		zips: ["28401","28403","28405","28409","28412"]
-		neighbors: ["Wrightsville Beach","Carolina Beach","Leland"]
-		demonyms: ["Wilmington","New Hanover"]
