@@ -1,0 +1,1 @@
+{"name":"@mcp/mcp-content-lint","version":"0.1.0","type":"module","main":"dist/index.js","scripts":{"build":"tsc -p tsconfig.json","start:http":"node dist/server.js --transport=http --port=3052","start:stdio":"node dist/server.js --transport=stdio"},"dependencies":{"@mcp/common":"workspace:*","js-yaml":"^4.1.0","pino":"^9.0.0"},"devDependencies":{"typescript":"^5.5.4"}}
