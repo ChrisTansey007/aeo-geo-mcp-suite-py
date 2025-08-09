@@ -1,0 +1,16 @@
+# Canonical NAP per location for lint/schema checks
+locations:
+	wilmington_nc:
+		name: "Port City Fence"
+		telephone: "+1-910-555-0123"
+		address:
+			streetAddress: "123 Market St"
+			addressLocality: "Wilmington"
+			addressRegion: "NC"
+			postalCode: "28401"
+			addressCountry: "US"
+		geo:
+			latitude: 34.2257
+			longitude: -77.9447
+		sameAs:
+			- "https://g.page/r/XXXX"  # GBP short URL
